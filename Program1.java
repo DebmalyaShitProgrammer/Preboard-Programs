@@ -30,7 +30,7 @@ class Program1
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Enter a sentence: ");
-        String sentence = sc.nextLine().toUpperCase();
+        String sentence = sc.nextLine().toUpperCase() + " ";
         String word = "", rev = "";
         int count = 0;
         
