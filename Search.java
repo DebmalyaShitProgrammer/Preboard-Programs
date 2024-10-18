@@ -39,22 +39,23 @@ public class Search
     void find2()
     {
         String word = "", maxword = "";
-        int maxlen = 0; 
+        int maxlen = 0;
+        System.out.print("Longest words: ");
         for(int i = 0; i < a.length(); i++)
         {
             if(a.charAt(i) != ' ')
                 word += a.charAt(i);
             else
             {
-                if(word.length() > maxlen)
+                if(word.length() >= maxlen)
                 {
                     maxword = word;
                     maxlen = word.length();
                 }
+                System.out.print(word + "(" + maxlen + ")" + "\t");
                 word = "";
             }
         }
-        System.out.println("Longest word: " + maxword + "(" + maxlen + ")");
     }
 
     void test()
