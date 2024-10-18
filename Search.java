@@ -3,13 +3,13 @@ public class Search
 {
     String a, b;
 
-    public Search(String a, String b)
+    Search(String a, String b)
     {
         this.a = a.trim() + " ";
         this.b = b.trim() + " ";
     }
 
-    public void find1()
+    void find1()
     {
         String wordA = "";
         System.out.println("Common words: ");
@@ -36,7 +36,7 @@ public class Search
         }
     }
 
-    public void find2()
+    void find2()
     {
         String word = "", maxword = "";
         int maxlen = 0; 
@@ -57,7 +57,7 @@ public class Search
         System.out.println("Longest word: " + maxword + "(" + maxlen + ")");
     }
 
-    public void test()
+    void test()
     {
         Scanner sc = new Scanner(System.in);
 
