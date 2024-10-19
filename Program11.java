@@ -8,9 +8,11 @@ public class Program11
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter matrix dimensions: ");
         b = new int[sc.nextInt()][sc.nextInt()];
-        a = new int[b[0].length];
+        a = new int[row];
+        row = row;
+        col = col;
         System.out.print("Enter the elements: ");
-        for(int i = 0; i < b.length; i++)
+        for(int i = 0; i < col; i++)
         {
             for(int j = 0; j < b[i].length; j++)
             {
@@ -37,8 +39,8 @@ public class Program11
     
     void extract()
     {
-        a = new int[b[0].length];
-        for(int i = 0; i < b.length; i++)
+        a = new int[row];
+        for(int i = 0; i < col; i++)
         {
             for(int j = 0; j < b[i].length; j++)
             {
@@ -54,7 +56,7 @@ public class Program11
     
     void display()
     {
-        for(int i = 0; i < b.length; i++)
+        for(int i = 0; i < col; i++)
         {
             for(int j = 0; j < b[i].length; j++)
             {
@@ -66,32 +68,32 @@ public class Program11
     
     void square()
     {
-        if(b.length == b[0].length)
+        if(col == row)
         {
-            int i, j, k, t = b.length-2, p;
+            int i, j, k, t = col-2, p;
             for(i = 0; i < a.length; i++)
             {
-                if(i <= b.length/2)
+                if(i <= col/2)
                 {
                     for(j = 0; j <= i; j++)
                         System.out.print(b[i][j]);
-                    j = i == b.length/2 ? a.length-2 : a.length-1-i;
+                    j = i == col/2 ? a.length-2 : a.length-1-i;
                     for(p = 1; p <= t; p++)
                         System.out.print(" ");
                     for(; j < a.length; j++)
                         System.out.print(b[i][j]);
                     t -= 2;
                 }
-                if(i == b.length/2)
+                if(i == col/2)
                     t = 1;
-                if(i > b.length/2)
+                if(i > col/2)
                 {
-                    for(j = 0; j < b.length-i; j++)
+                    for(j = 0; j < col-i; j++)
                         System.out.print(b[i][j]);
                     for(p = 1; p <= t; p++)
                         System.out.print(" ");
                     t += 2;
-                    for(j = i; j < b.length; j++)
+                    for(j = i; j < col; j++)
                         System.out.print(b[i][j]);
                 }
                 System.out.println();
