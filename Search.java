@@ -52,10 +52,10 @@ public class Search
                     maxword = word;
                     maxlen = word.length();
                 }
-                System.out.print(word + "(" + maxlen + ")" + "\t");
                 word = "";
             }
         }
+        System.out.print(maxword + "(" + maxlen + ")" + "\t");
     }
 
     void test()
