@@ -30,7 +30,7 @@ public class Program2
         }
 
         System.out.print("Binary: ");
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i <= 10; i++)
             System.out.print(binary[i]);
         System.out.println();
     }
