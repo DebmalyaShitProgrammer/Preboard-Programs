@@ -9,8 +9,8 @@ public class Program11
         System.out.println("Enter matrix dimensions: ");
         b = new int[sc.nextInt()][sc.nextInt()];
         a = new int[row];
-        row = row;
-        col = col;
+        row = b[0].length;
+        col = b.length;
         System.out.print("Enter the elements: ");
         for(int i = 0; i < col; i++)
         {
