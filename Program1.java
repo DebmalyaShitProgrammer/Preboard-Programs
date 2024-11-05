@@ -22,6 +22,7 @@ class Program1
             }
             n /= 10;
         }
+        System.out.print(format);
     }
     
     void palin()
