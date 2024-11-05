@@ -33,7 +33,6 @@ public class Program4
     void series2()
     {
         sum = base;
-        double sign = -1;
         double term;
 
         int fib[] = new int[power + 1];
@@ -51,8 +50,10 @@ public class Program4
         for (int i = 2; i <= power; i++)
         {
             term = Math.pow(base, i) / fib[i];
-            sum += sign * term;
-            sign *= -1;
+            if(i%3 == 0)
+                sum -= term;
+            else
+                sum += term;
         }
 
         System.out.println("Result of series2: " + sum);
