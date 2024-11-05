@@ -22,7 +22,6 @@ class Program1
             }
             n /= 10;
         }
-        System.out.print("Formatted number: " + format);
     }
     
     void palin()
