@@ -1,28 +1,28 @@
 import java.util.*;
 class Program1
 {
-    void numeber()
+    void number()
     {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Enter a number: ");
         long n = sc.nextLong();
         long format = 0;
-        for(int i = 0; i <= 9; i++)
+        int[] digits = new int[10];
+        long f = 1;
+    
+        while (n > 0)
         {
-            long copy = n; int c = 0;
-            while(copy > 0)
+            long digit = n % 10;
+            if (digits[(int)digit] == 0)
             {
-                if(copy%10 == i && c == 0)
-                {
-                    format = format*10 + copy%10;
-                    c++;
-                }
-                copy /= 10;
+                format += digit * f;
+                f *= 10;
+                digits[(int)digit] = 1;
             }
+            n /= 10;
         }
-        
-        System.out.print(format);
+        System.out.print("Formatted number: " + format);
     }
     
     void palin()
